@@ -1,0 +1,18 @@
+.wireframes img {
+    width: 50vw;
+    height: 70vh;
+}
+.wireframes {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Use 100% instead of 100vw to avoid scrollbars */
+}
+
+.wireframes .left {
+    align-self: flex-start;
+    border-radius: 25px;
+}
+.wireframes .right {
+    align-self: flex-end;
+    border-radius: 25px;
+}
