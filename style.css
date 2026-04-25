@@ -16,3 +16,86 @@
     align-self: flex-end;
     border-radius: 25px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* ─── COLOR VARIABLES ─────────────────────────
+   Use these everywhere instead of hardcoding hex.
+   Example: color: var(--navy);
+─────────────────────────────────────────────── */
+:root {
+  --navy:      #0B2027;   /* headings, navbar, footer backgrounds */
+  --teal:      #40798C;   /* buttons, links, highlights */
+  --teal-soft: #70A9A1;   /* hover states, icons */
+  --mint:      #E5FBED;   /* light section backgrounds, cards */
+  --sage:      #CFD7C7;   /* borders, dividers */
+  --cream:     #F6F1D1;   /* page background */
+}
+
+/* ─── BASE ────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--navy);
+  background-color: var(--cream);
+}
+
+/* ─── TYPOGRAPHY ──────────────────────────────── */
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.2;
+}
+
+h3, h4, h5, h6 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+
+p { margin-bottom: 1rem; }
+
+a {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--teal-soft);
+}
+
+/* ─── WIREFRAME IMAGES (from starter) ────────── */
+.wireframes {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.wireframes img {
+  width: 50vw;
+  height: 70vh;
+  object-fit: contain;
+}
+
+.wireframes .left {
+  align-self: flex-start;
+  border-radius: 25px;
+}
+
+.wireframes .right {
+  align-self: flex-end;
+  border-radius: 25px;
+}
