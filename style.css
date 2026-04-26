@@ -99,3 +99,136 @@ a:hover {
   align-self: flex-end;
   border-radius: 25px;
 }
+
+#impact {
+  padding: 40px;
+}
+
+.impact-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 20px 0 40px 0;
+}
+
+.impact-card {
+  border: 2px solid #915CE5;
+  border-radius: 16px;
+  padding: 24px;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.impact-card:hover {
+  box-shadow: 0 4px 16px rgba(145, 92, 229, 0.2);
+}
+
+.impact-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.card-full {
+  display: none;
+  margin-top: 10px;
+  color: #555;
+}
+
+.read-more-hint {
+  color: #915CE5;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.risk-list {
+  margin: 20px 0 40px 0;
+}
+
+.risk-item {
+  border: 1px solid #915CE5;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.risk-btn {
+  width: 100%;
+  text-align: left;
+  padding: 16px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.risk-btn:hover {
+  background-color: #f3eeff;
+}
+
+.risk-content {
+  display: none;
+  padding: 0 20px 16px 20px;
+}
+
+.risk-content ul {
+  margin-top: 8px;
+  padding-left: 20px;
+}
+
+.risk-content li {
+  margin-bottom: 6px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.team-card {
+  border: 2px solid #915CE5;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.team-card:hover {
+  box-shadow: 0 4px 16px rgba(145, 92, 229, 0.2);
+}
+
+.team-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.team-role {
+  color: #915CE5;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+#bio-box {
+  display: none;
+  border: 2px solid #915CE5;
+  border-radius: 16px;
+  padding: 30px;
+  margin-top: 24px;
+  position: relative;
+}
+
+#bio-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #915CE5;
+}
