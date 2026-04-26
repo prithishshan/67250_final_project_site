@@ -1,38 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
 
-.wireframes img {
-    width: 50vw;
-    height: 70vh;
-}
-.wireframes {
-    display: flex;
-    flex-direction: column;
-    width: 100%; /* Use 100% instead of 100vw to avoid scrollbars */
-}
-
-.wireframes .left {
-    align-self: flex-start;
-    border-radius: 25px;
-}
-.wireframes .right {
-    align-self: flex-end;
-    border-radius: 25px;
-}
-
-/* ─── COLOR VARIABLES ─────────────────────────
-   Use these everywhere instead of hardcoding hex.
-   Example: color: var(--navy);
-─────────────────────────────────────────────── */
 :root {
-  --navy:      #0B2027;   /* headings, navbar, footer backgrounds */
-  --teal:      #40798C;   /* buttons, links, highlights */
-  --teal-soft: #70A9A1;   /* hover states, icons */
-  --mint:      #E5FBED;   /* light section backgrounds, cards */
-  --sage:      #CFD7C7;   /* borders, dividers */
-  --cream:     #FFFFFF;   /* page background */
+  --navy:      #0B2027;
+  --teal:      #40798C;
+  --teal-soft: #70A9A1;
+  --mint:      #E5FBED;
+  --sage:      #CFD7C7;
+  --cream:     #FFFFFF;
 }
 
-/* ─── BASE ────────────────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -47,7 +23,6 @@ body {
   background-color: var(--cream);
 }
 
-/* ─── TYPOGRAPHY ──────────────────────────────── */
 h1, h2 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
@@ -77,7 +52,6 @@ a:hover {
   color: var(--teal-soft);
 }
 
-/* ─── WIREFRAME IMAGES (from starter) ────────── */
 .wireframes {
   display: flex;
   flex-direction: column;
@@ -162,7 +136,7 @@ a:hover {
 
 .ip-hero-title {
   font-family: 'Playfair Display', serif;
-  font-size: 5rem;
+  font-size: 7rem;
   font-weight: 700;
   color: var(--navy);
   line-height: 1.05;
@@ -200,7 +174,7 @@ a:hover {
 
 .ip-section-title {
   font-family: 'Playfair Display', serif;
-  font-size: 2.4rem;
+  font-size: 3.5rem;
   font-weight: 700;
   color: var(--navy);
   margin-bottom: 48px;
@@ -237,74 +211,98 @@ a:hover {
   white-space: nowrap;
 }
 
-/* ── IMPACT CARDS ─────────────────────────────────────────────── */
-.ip-cards {
+/* ── FULL IMPACT SECTIONS ────────────────────── */
+.ip-impact-full {
+  padding: 120px 60px;
+  background: #ffffff;
+  border-bottom: 1px solid var(--sage);
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+.ip-impact-full:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.ip-impact-full:nth-child(odd) {
+  flex-direction: row;
+}
+
+.ip-impact-text {
+  flex: 1;
+}
+
+.ip-impact-image {
+  flex: 1;
+}
+
+.ip-impact-image img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  height: 400px;
+}
+
+.ip-impact-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.05;
+  margin: 16px 0 32px 0;
+}
+
+.ip-impact-body {
+  font-size: 1.3rem;
+  color: #444;
+  max-width: 800px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ── PHOTO GRID ──────────────────────────────── */
+.ip-photo-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-
-.ip-card {
-  background: #ffffff;
-  border: 1px solid var(--sage);
-  border-radius: 20px;
-  padding: 36px;
-  cursor: pointer;
-  transition: border-color 0.2s, transform 0.2s;
-}
-
-.ip-card:hover {
-  border-color: var(--teal);
-  transform: translateY(-3px);
-}
-
-.ip-card-top {
-  display: flex;
-  align-items: center;
+  grid-template-rows: auto auto;
   gap: 12px;
-  margin-bottom: 16px;
 }
 
-.ip-card-icon {
-  font-size: 1.5rem;
+.ip-photo-tall {
+  grid-row: 1 / 3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
 }
 
-.ip-card-tag {
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--teal);
-  background: var(--mint);
-  padding: 4px 10px;
-  border-radius: 999px;
+.ip-photo-short {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
 }
 
-.ip-card-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  color: var(--navy);
-  margin-bottom: 12px;
+/* ── PHOTO STACK ──────────────────────────────── */
+.ip-photo-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.ip-card-preview {
-  color: #555;
-  margin-bottom: 0;
+.ip-photo-stack-top {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
 }
 
-.ip-card-full {
-  display: none;
-  color: #555;
-  margin-top: 16px;
-  padding-top: 16px;
-  border-top: 1px solid var(--sage);
-  line-height: 1.7;
-}
-
-.ip-card-hint {
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--teal);
+.ip-photo-stack-bottom {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
 }
 
 /* ── RISKS ────────────────────────────────────────────────────── */
@@ -328,7 +326,7 @@ a:hover {
   border: none;
   cursor: pointer;
   font-family: 'DM Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: #ffffff;
   text-align: left;
@@ -364,6 +362,7 @@ a:hover {
   padding: 0 0 28px 0;
   color: var(--sage);
   line-height: 1.7;
+  font-size: 1.1rem;
 }
 
 .ip-risk-content p {
@@ -416,7 +415,7 @@ a:hover {
 }
 
 .ip-team-card h3 {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   color: var(--navy);
   margin-bottom: 4px;
 }
@@ -496,4 +495,60 @@ a:hover {
   background: var(--navy);
   color: var(--sage);
   font-size: 0.85rem;
+}
+
+/* ── SCROLL ANIMATIONS ───────────────────────────────────────── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── SLIDESHOW ───────────────────────────────── */
+.ip-slideshow {
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.ip-slide {
+  display: none;
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: opacity 0.8s ease;
+}
+
+.ip-slide.active {
+  display: block;
+}
+
+.ip-slide-dots {
+  text-align: center;
+  padding: 12px 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.ip-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--sage);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.ip-dot.active {
+  background: var(--teal);
+  width: 20px;
+  border-radius: 999px;
 }

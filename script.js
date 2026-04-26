@@ -22,13 +22,11 @@ function toggleRisk(btn) {
 
   var isOpen = content.style.display === "block";
 
-  // close all first
   var allContents = document.querySelectorAll(".ip-risk-content");
   var allArrows = document.querySelectorAll(".ip-arrow");
   allContents.forEach(function(c) { c.style.display = "none"; });
   allArrows.forEach(function(a) { a.classList.remove("open"); });
 
-  // open clicked one if it was closed
   if (!isOpen) {
     content.style.display = "block";
     arrow.classList.add("open");
@@ -88,3 +86,34 @@ function showBio(person) {
 function closeBio() {
   document.getElementById("ip-bio").style.display = "none";
 }
+
+// ── SCROLL FADE IN ────────────────────────────────────────────
+var fadeEls = document.querySelectorAll('.fade-up');
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15 });
+
+fadeEls.forEach(function(el) {
+  observer.observe(el);
+});
+
+// ── IMPACT SLIDESHOW ──────────────────────────────────────────
+var ipSlides = document.querySelectorAll('.ip-slide');
+var ipDots = document.querySelectorAll('.ip-dot');
+var ipSlideIndex = 0;
+
+function showIpSlide(n) {
+  ipSlides.forEach(function(s) { s.classList.remove('active'); });
+  ipDots.forEach(function(d) { d.classList.remove('active'); });
+  ipSlideIndex = (n + ipSlides.length) % ipSlides.length;
+  ipSlides[ipSlideIndex].classList.add('active');
+  ipDots[ipSlideIndex].classList.add('active');
+}
+
+setInterval(function() {
+  showIpSlide(ipSlideIndex + 1);
+}, 3000);

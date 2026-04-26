@@ -21,32 +21,135 @@
   </nav>
 
   <!-- HERO -->
-  <section class="ip-hero">
+  <section class="ip-hero fade-up">
     <p class="ip-eyebrow">Our Impact</p>
     <h1 class="ip-hero-title">A Positive<br><span class="ip-accent">Ripple Effect.</span></h1>
     <p class="ip-hero-sub">CivicMatch creates lasting value for volunteers, NGOs, and the communities they serve.</p>
     <div class="ip-hero-line"></div>
   </section>
 
-  <!-- IMPACT CARDS -->
-  <section class="ip-section">
-    <div class="ip-cards">
-
-      <div class="ip-card" onclick="expandCard(this)">
-        <div class="ip-card-top">
-          <span class="ip-card-icon">🌍</span>
-          <span class="ip-card-tag">Societal Impact</span>
+  <!-- SOCIETAL IMPACT -->
+  <section class="ip-impact-full fade-up">
+    <div class="ip-impact-text">
+      <p class="ip-eyebrow">Societal Impact</p>
+      <h2 class="ip-impact-title">Skill over pedigree.</h2>
+      <p class="ip-impact-body">We move the focus from volunteerism to skill-equity. By weighting community-lived experience equally with degrees, we break the Pedigree Bias and expand who gets noticed as an expert in their field. We also gather people who are truly passionate about what they do, so much so that they want to use their professional skills for social good.</p>
+    </div>
+    <div class="ip-impact-image">
+      <div class="ip-slideshow">
+        <img src="./assets/social1.jpg" alt="Volunteers building" class="ip-slide active">
+        <img src="./assets/social2.jpg" alt="Teaching children" class="ip-slide">
+        <img src="./assets/social3.jpg" alt="Medical volunteers" class="ip-slide">
+        <div class="ip-slide-dots">
+          <span class="ip-dot active"></span>
+          <span class="ip-dot"></span>
+          <span class="ip-dot"></span>
         </div>
-        <h2 class="ip-card-title">Skill over pedigree.</h2>
-        <p class="ip-card-preview">Breaking Pedigree Bias through skill-equity. <span class="ip-card-hint">+ Read more</span></p>
-        <p class="ip-card-full">We move the focus from volunteerism to skill-equity. By weighting community-lived experience equally with degrees, we break the Pedigree Bias and expand who gets noticed as an expert in their field. We also gather people who are truly passionate about what they do, so much so that they want to use their professional skills for social good.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORGANIZATIONAL IMPACT -->
+  <section class="ip-impact-full fade-up">
+    <div class="ip-impact-text">
+      <p class="ip-eyebrow">Organizational Impact</p>
+      <h2 class="ip-impact-title">Scale without the bottleneck.</h2>
+      <p class="ip-impact-body">We solve the problem of an administrative bottleneck for NGOs. By automating the screening process, we allow non-profits to scale their impact without needing more human capital.</p>
+    </div>
+    <div class="ip-impact-image">
+      <div class="ip-photo-stack">
+        <img src="./assets/organizational1.png" alt="NGO partners" class="ip-photo-stack-top">
+        <img src="./assets/organizational2.avif" alt="Volunteers working" class="ip-photo-stack-bottom">
+    </div>
+  </section>
+
+  <!-- RISKS -->
+  <section class="ip-section ip-section-dark">
+    <p class="ip-eyebrow ip-eyebrow-light">Risks and Impacts</p>
+    <h2 class="ip-section-title ip-text-light">Every system has trade-offs. How we combat them:</h2>
+
+    <div class="ip-risks">
+
+      <div class="ip-risk fade-up">
+        <button class="ip-risk-btn" onclick="toggleRisk(this)">
+          <span>⚠️ The Adoption Risk <span class="ip-risk-tag">TAM</span></span>
+          <span class="ip-arrow">+</span>
+        </button>
+        <div class="ip-risk-content">
+          <p>We recognize that ease of use isn't enough for widespread adoption. If students don't perceive the Impact Passport as a legitimate professional currency, adoption will stall. We mitigate this through institutional partnerships with universities and recruiters to ensure our digital credentials hold real-world weight in the job market.</p>
+        </div>
       </div>
 
-      <div class="ip-card" onclick="expandCard(this)">
-        <div class="ip-card-top">
-          <span class="ip-card-icon">🏢</span>
-          <span class="ip-card-tag">Organizational Impact</span>
+      <div class="ip-risk fade-up">
+        <button class="ip-risk-btn" onclick="toggleRisk(this)">
+          <span>⚙️ The Sociotechnical Trade-off</span>
+          <span class="ip-arrow">+</span>
+        </button>
+        <div class="ip-risk-content">
+          <p>A primary risk in AI-driven platforms is that community service could feel cold, almost like a transactional exchange. Furthermore, standard algorithms often suffer from "Pedigree Bias," where students from higher-resource backgrounds are prioritized by the system.</p>
+          <p style="margin-top: 12px;">We counteract this through a two-pronged design:</p>
+          <ul>
+            <li><strong>Human-Centric Connection:</strong> The AI is strictly an intermediary that only handles the complex logistics of matching organizations to people, and it leaves the service itself entirely focused on human-to-human interaction.</li>
+            <li><strong>Algorithmic Equity:</strong> Our Skill-Graph is intentionally tuned to weigh lived experiences as well as community-based knowledge equally with traditional academic credentials. This ensures that the engine identifies talent based on actual capability rather than just resume prestige.</li>
+          </ul>
         </div>
-        <h2 class="ip-card-title">Scale without the bottleneck.</h2>
-        <p class="ip-card-preview">Solving the NGO administrative bottleneck. <span class="ip-card-hint">+ Read more</span></p>
-        <p class="ip-card-full
+      </div>
+
+      <div class="ip-risk fade-up">
+        <button class="ip-risk-btn" onclick="toggleRisk(this)">
+          <span>🔄 Unintended Consequences</span>
+          <span class="ip-arrow">+</span>
+        </button>
+        <div class="ip-risk-content">
+          <p>To prevent displacing entry-level paid roles, our system identifies unmet needs — tasks that NGOs currently leave undone due to budget constraints. We don't replace jobs; we fill the gaps that hold community progress back.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="ip-section">
+    <p class="ip-eyebrow">Meet the Team</p>
+    <h2 class="ip-section-title">The CivicMatch Team.</h2>
+
+    <div class="ip-team">
+
+      <div class="ip-team-card fade-up" style="transition-delay: 0s" onclick="showBio('pritish')">
+        <div class="ip-team-icon" style="background: #40798C">⚙️</div>
+        <h3>Pritish Shan</h3>
+        <p class="ip-team-role">Lead System Architect</p>
+        <span class="ip-team-hint">View contributions →</span>
+      </div>
+
+      <div class="ip-team-card fade-up" style="transition-delay: 0.15s" onclick="showBio('daniel')">
+        <div class="ip-team-icon" style="background: #0B2027">📊</div>
+        <h3>Daniel Chen</h3>
+        <p class="ip-team-role">Strategic Analyst</p>
+        <span class="ip-team-hint">View contributions →</span>
+      </div>
+
+      <div class="ip-team-card fade-up" style="transition-delay: 0.3s" onclick="showBio('jacqueline')">
+        <div class="ip-team-icon" style="background: #70A9A1">🧠</div>
+        <h3>Jacqueline Zang</h3>
+        <p class="ip-team-role">Impact & Social Theory Lead</p>
+        <span class="ip-team-hint">View contributions →</span>
+      </div>
+
+    </div>
+
+    <!-- Bio panel -->
+    <div id="ip-bio" class="ip-bio">
+      <button class="ip-bio-close" onclick="closeBio()">✕</button>
+      <div id="ip-bio-content"></div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="ip-footer">
+    <p>© 2026 CivicMatch. Built for 67250 IS Milieux.</p>
+  </footer>
+
+</body>
+</html>
