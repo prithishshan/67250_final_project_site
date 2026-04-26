@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
 .wireframes img {
     width: 50vw;
     height: 70vh;
@@ -16,8 +18,6 @@
     align-self: flex-end;
     border-radius: 25px;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
 
 /* ─── COLOR VARIABLES ─────────────────────────
    Use these everywhere instead of hardcoding hex.
@@ -100,135 +100,400 @@ a:hover {
   border-radius: 25px;
 }
 
-#impact {
-  padding: 40px;
+/* ── NAV ─────────────────────────────────────────────────────── */
+.ip-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: #ffffff;
+  border-bottom: 1px solid var(--sage);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.impact-cards {
+.ip-nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.ip-nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.ip-nav-links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--navy);
+  text-decoration: none;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.ip-nav-links a:hover,
+.ip-nav-active {
+  opacity: 1 !important;
+}
+
+/* ── HERO ─────────────────────────────────────────────────────── */
+.ip-hero {
+  padding: 100px 60px 60px;
+  background: #ffffff;
+  max-width: 900px;
+}
+
+.ip-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 20px;
+}
+
+.ip-eyebrow-light {
+  color: var(--teal-soft);
+}
+
+.ip-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.05;
+  margin-bottom: 24px;
+}
+
+.ip-accent {
+  color: var(--teal);
+}
+
+.ip-hero-sub {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 520px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.ip-hero-line {
+  width: 60px;
+  height: 3px;
+  background: var(--teal);
+  border-radius: 2px;
+}
+
+/* ── SECTIONS ─────────────────────────────────────────────────── */
+.ip-section {
+  padding: 80px 60px;
+  background: #ffffff;
+}
+
+.ip-section-dark {
+  background: var(--navy);
+}
+
+.ip-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 48px;
+  margin-top: 8px;
+}
+
+.ip-text-light {
+  color: #ffffff;
+}
+
+/* ── DIVIDER ──────────────────────────────────────────────────── */
+.ip-divider {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 60px;
+  background: #ffffff;
+}
+
+.ip-divider::before,
+.ip-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--sage);
+}
+
+.ip-divider span {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--teal);
+  white-space: nowrap;
+}
+
+/* ── IMPACT CARDS ─────────────────────────────────────────────── */
+.ip-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
-  margin: 20px 0 40px 0;
 }
 
-.impact-card {
-  border: 2px solid #915CE5;
-  border-radius: 16px;
-  padding: 24px;
+.ip-card {
+  background: #ffffff;
+  border: 1px solid var(--sage);
+  border-radius: 20px;
+  padding: 36px;
   cursor: pointer;
-  transition: box-shadow 0.2s;
+  transition: border-color 0.2s, transform 0.2s;
 }
 
-.impact-card:hover {
-  box-shadow: 0 4px 16px rgba(145, 92, 229, 0.2);
+.ip-card:hover {
+  border-color: var(--teal);
+  transform: translateY(-3px);
 }
 
-.impact-icon {
-  font-size: 2rem;
-  margin-bottom: 8px;
+.ip-card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
-.card-full {
-  display: none;
-  margin-top: 10px;
-  color: #555;
+.ip-card-icon {
+  font-size: 1.5rem;
 }
 
-.read-more-hint {
-  color: #915CE5;
-  font-weight: bold;
-  font-size: 0.85rem;
+.ip-card-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
+  background: var(--mint);
+  padding: 4px 10px;
+  border-radius: 999px;
 }
 
-.risk-list {
-  margin: 20px 0 40px 0;
-}
-
-.risk-item {
-  border: 1px solid #915CE5;
-  border-radius: 12px;
+.ip-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--navy);
   margin-bottom: 12px;
-  overflow: hidden;
 }
 
-.risk-btn {
+.ip-card-preview {
+  color: #555;
+  margin-bottom: 0;
+}
+
+.ip-card-full {
+  display: none;
+  color: #555;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--sage);
+  line-height: 1.7;
+}
+
+.ip-card-hint {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--teal);
+}
+
+/* ── RISKS ────────────────────────────────────────────────────── */
+.ip-risks {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.ip-risk {
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.ip-risk-btn {
   width: 100%;
-  text-align: left;
-  padding: 16px 20px;
-  font-size: 1rem;
-  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 0;
   background: none;
   border: none;
   cursor: pointer;
-  display: flex;
-  justify-content: space-between;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: left;
 }
 
-.risk-btn:hover {
-  background-color: #f3eeff;
+.ip-risk-btn:hover {
+  color: var(--teal-soft);
 }
 
-.risk-content {
+.ip-arrow {
+  font-size: 1.4rem;
+  font-weight: 300;
+  transition: transform 0.2s;
+  color: var(--teal-soft);
+}
+
+.ip-arrow.open {
+  transform: rotate(45deg);
+}
+
+.ip-risk-tag {
+  font-size: 0.65rem;
+  background: var(--teal);
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.ip-risk-content {
   display: none;
-  padding: 0 20px 16px 20px;
+  padding: 0 0 28px 0;
+  color: var(--sage);
+  line-height: 1.7;
 }
 
-.risk-content ul {
-  margin-top: 8px;
+.ip-risk-content p {
+  color: var(--sage);
+}
+
+.ip-risk-content ul {
+  margin-top: 12px;
   padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.risk-content li {
-  margin-bottom: 6px;
+.ip-risk-content li {
+  color: var(--sage);
 }
 
-.team-grid {
+/* ── TEAM ─────────────────────────────────────────────────────── */
+.ip-team {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 24px;
-  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
-.team-card {
-  border: 2px solid #915CE5;
-  border-radius: 16px;
-  padding: 24px;
-  text-align: center;
+.ip-team-card {
+  border: 1px solid var(--sage);
+  border-radius: 20px;
+  padding: 36px 28px;
   cursor: pointer;
-  transition: box-shadow 0.2s;
+  transition: border-color 0.2s, transform 0.2s;
+  background: #ffffff;
 }
 
-.team-card:hover {
-  box-shadow: 0 4px 16px rgba(145, 92, 229, 0.2);
+.ip-team-card:hover {
+  border-color: var(--teal);
+  transform: translateY(-3px);
 }
 
-.team-icon {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.team-role {
-  color: #915CE5;
-  font-weight: bold;
-  font-size: 0.85rem;
-}
-
-#bio-box {
-  display: none;
-  border: 2px solid #915CE5;
+.ip-team-icon {
+  width: 64px;
+  height: 64px;
   border-radius: 16px;
-  padding: 30px;
-  margin-top: 24px;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
 }
 
-#bio-close {
+.ip-team-card h3 {
+  font-size: 1.2rem;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.ip-team-role {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.ip-team-hint {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--teal);
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.ip-team-card:hover .ip-team-hint {
+  opacity: 1;
+}
+
+/* ── BIO PANEL ────────────────────────────────────────────────── */
+.ip-bio {
+  display: none;
+  background: var(--mint);
+  border: 1px solid var(--teal);
+  border-radius: 20px;
+  padding: 40px;
+  position: relative;
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.ip-bio-close {
   position: absolute;
-  top: 12px;
-  right: 16px;
+  top: 16px;
+  right: 20px;
   background: none;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   cursor: pointer;
-  color: #915CE5;
+  color: var(--teal);
+  font-weight: 600;
+}
+
+.ip-bio h3 {
+  font-size: 1.4rem;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.ip-bio ul {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.ip-bio li {
+  color: var(--navy);
+  line-height: 1.6;
+}
+
+/* ── FOOTER ───────────────────────────────────────────────────── */
+.ip-footer {
+  padding: 40px 60px;
+  background: var(--navy);
+  color: var(--sage);
+  font-size: 0.85rem;
 }

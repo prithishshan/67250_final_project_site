@@ -1,42 +1,90 @@
-// Impact cards — click to expand
+// ── IMPACT CARDS — click to expand ───────────────────────────
 function expandCard(card) {
-  var full = card.querySelector(".card-full");
-  var hint = card.querySelector(".read-more-hint");
+  var full = card.querySelector(".ip-card-full");
+  var hint = card.querySelector(".ip-card-hint");
+  var preview = card.querySelector(".ip-card-preview");
+
   if (full.style.display === "block") {
     full.style.display = "none";
-    hint.style.display = "inline";
+    hint.innerHTML = "+ Read more";
+    preview.style.display = "block";
   } else {
     full.style.display = "block";
-    hint.style.display = "none";
+    hint.innerHTML = "− Read less";
+    preview.style.display = "none";
   }
 }
 
-// Risk accordion
+// ── RISK ACCORDION ────────────────────────────────────────────
 function toggleRisk(btn) {
   var content = btn.nextElementSibling;
-  var arrow = btn.querySelector(".arrow");
-  if (content.style.display === "block") {
-    content.style.display = "none";
-    arrow.innerHTML = "▼";
-  } else {
+  var arrow = btn.querySelector(".ip-arrow");
+
+  var isOpen = content.style.display === "block";
+
+  // close all first
+  var allContents = document.querySelectorAll(".ip-risk-content");
+  var allArrows = document.querySelectorAll(".ip-arrow");
+  allContents.forEach(function(c) { c.style.display = "none"; });
+  allArrows.forEach(function(a) { a.classList.remove("open"); });
+
+  // open clicked one if it was closed
+  if (!isOpen) {
     content.style.display = "block";
-    arrow.innerHTML = "▲";
+    arrow.classList.add("open");
   }
 }
 
-// Team bio popup
+// ── TEAM BIO PANEL ────────────────────────────────────────────
 var bios = {
-  pritish: "<h3>⚙️ Pritish Shan</h3><p><strong>Lead System Architect</strong></p><p>Defined the Skill-Graph logic and technical matching framework. Built the mobile wireframes and managed the GitHub repo for the site's front-end implementation.</p>",
-  daniel: "<h3>📊 Daniel Chen</h3><p><strong>Strategic Analyst</strong></p><p>Conducted market research on the NGO value chain and led the business model and scalability strategy. Facilitated community outreach to validate NGO Resource Gaps.</p>",
-  jacqueline: "<h3>🧠 Jacqueline Zang</h3><p><strong>Impact & Social Theory Lead</strong></p><p>Applied TAM and Sociotechnical Systems Theory to the platform's design. Identified ethical risks and managed the collaboration narrative and site documentation.</p>"
-}
+  pritish: {
+    name: "Pritish Shan",
+    role: "Lead System Architect",
+    icon: "⚙️",
+    items: [
+      "Defined the Skill-Graph logic and technical matching framework.",
+      "Developed high-fidelity mobile wireframes to demonstrate user flow.",
+      "Managed the GitHub repository for the site's front-end implementation."
+    ]
+  },
+  daniel: {
+    name: "Daniel Chen",
+    role: "Strategic Analyst",
+    icon: "📊",
+    items: [
+      "Conducted market research to define the NGO value chain and competitive positioning.",
+      "Led the development of the business model and scalability strategy.",
+      "Facilitated community outreach to validate NGO \"Resource Gaps.\""
+    ]
+  },
+  jacqueline: {
+    name: "Jacqueline Zang",
+    role: "Impact & Social Theory Lead",
+    icon: "🧠",
+    items: [
+      "Applied the Technology Acceptance Model (TAM) and Sociotechnical Systems Theory to the platform's conceptual design.",
+      "Identified and mitigated ethical risks through the \"Lived Experience\" weighting framework.",
+      "Managed the Team Collaboration narrative and final poster/site documentation."
+    ]
+  }
+};
 
 function showBio(person) {
-  document.getElementById("bio-content").innerHTML = bios[person];
-  document.getElementById("bio-box").style.display = "block";
-  document.getElementById("bio-box").scrollIntoView({behavior: "smooth"});
+  var bio = bios[person];
+  var items = bio.items.map(function(i) {
+    return "<li>" + i + "</li>";
+  }).join("");
+
+  document.getElementById("ip-bio-content").innerHTML =
+    "<h3>" + bio.icon + " " + bio.name + "</h3>" +
+    "<span class='ip-team-role'>" + bio.role + "</span>" +
+    "<ul>" + items + "</ul>";
+
+  var panel = document.getElementById("ip-bio");
+  panel.style.display = "block";
+  panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
 
 function closeBio() {
-  document.getElementById("bio-box").style.display = "none";
+  document.getElementById("ip-bio").style.display = "none";
 }
