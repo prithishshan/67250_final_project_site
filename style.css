@@ -850,6 +850,15 @@ a:hover {
 
 .ip-impact-full {
     flex-direction: column !important;
+    align-items: stretch !important;
     gap: 40px;
+    padding: 40px 24px;
   }
+
+  .ip-impact-text,
+  .ip-impact-image {
+    flex: none !important;
+    width: 100% !important;
+  }
+
 }
