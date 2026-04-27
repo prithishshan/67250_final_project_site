@@ -1,3 +1,11 @@
+document.addEventListener("DOMContentLoaded", function() {
+  if (window.innerWidth <= 768) {
+    document.querySelectorAll('.fade-up').forEach(function(el) {
+      el.classList.add('visible');
+    });
+  }
+});
+
 /* ------------------------------------IMPACT CARDS-------------------------------------------------- */
 function expandCard(card) {
   var full = card.querySelector(".ip-card-full");
