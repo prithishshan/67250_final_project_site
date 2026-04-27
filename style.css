@@ -856,7 +856,6 @@ a:hover {
   h2 { font-size: 1.5rem; }
   .ip-hero-title { font-size: 3rem; }
   .ip-impact-title { font-size: 2.5rem; }
-}
 
   .ip-impact-full,
   .ip-impact-full:nth-child(even),
@@ -873,3 +872,4 @@ a:hover {
   .ip-photo-stack {
     width: 100%;
   }
+}
