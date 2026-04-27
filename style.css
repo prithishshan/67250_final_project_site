@@ -53,38 +53,35 @@ a:hover {
 }
 
 .wireframes {
-  /* font-family: 'DM Sans', sans-serif; */
   display: flex;
   flex-direction: column;
-  gap: 40px; /* Adds vertical space between your two rows */
+  gap: 40px;
   width: 100%;
   padding: 50px;
 }
 
-/* This creates the side-by-side layout */
 .wireframe-row {
   display: flex;
-  align-items: center; /* Centers the text vertically with the image */
-  gap: 60px; /* Space between the image and the text */
+  align-items: center;
+  gap: 60px;
 }
 
-/* This flips the layout for the second row so the image goes to the right */
 .wireframe-row.reverse {
   flex-direction: row-reverse;
 }
 
 .wireframe-row img {
-  width: 50%; /* Image takes up half the row */
+  width: 50%;
   height: auto; 
   object-fit: cover;
   border-radius: 50px;
 }
 
 .text-content {
-  width: 50%; /* Text takes up the other half */
+  width: 50%;
 }
 
-/* ── NAV ─────────────────────────────────────────────────────── */
+/* -------------------------------------NAVIGATION SECTION--------------------------------------------------- */
 .ip-nav {
   display: flex;
   align-items: center;
@@ -124,7 +121,7 @@ a:hover {
   opacity: 1 !important;
 }
 
-/* ── HERO ─────────────────────────────────────────────────────── */
+/* -------------------------------------HERO SECTION--------------------------------------------------- */
 .ip-hero {
   padding: 100px 60px 60px;
   background: #ffffff;
@@ -172,7 +169,7 @@ a:hover {
   border-radius: 2px;
 }
 
-/* ── SECTIONS ─────────────────────────────────────────────────── */
+/* -------------------------------------SECTIONS--------------------------------------------------- */
 .ip-section {
   padding: 80px 60px;
   background: #ffffff;
@@ -195,7 +192,7 @@ a:hover {
   color: #ffffff;
 }
 
-/* ── DIVIDER ──────────────────────────────────────────────────── */
+/* -------------------------------------DIVIDERS--------------------------------------------------- */
 .ip-divider {
   display: flex;
   align-items: center;
@@ -221,7 +218,7 @@ a:hover {
   white-space: nowrap;
 }
 
-/* ── FULL IMPACT SECTIONS ────────────────────── */
+/* -------------------------------------FULL IMPACT SECTIONS--------------------------------------------------- */
 .ip-impact-full {
   padding: 120px 60px;
   background: #ffffff;
@@ -271,7 +268,7 @@ a:hover {
   margin: 0;
 }
 
-/* ── PHOTO GRID ──────────────────────────────── */
+/* -------------------------------------PHOTO GRID--------------------------------------------------- */
 .ip-photo-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -294,7 +291,7 @@ a:hover {
   border-radius: 16px;
 }
 
-/* ── PHOTO STACK ──────────────────────────────── */
+/* -------------------------------------PHOTO STACK--------------------------------------------------- */
 .ip-photo-stack {
   display: flex;
   flex-direction: column;
@@ -315,7 +312,7 @@ a:hover {
   border-radius: 16px;
 }
 
-/* ── RISKS ────────────────────────────────────────────────────── */
+/* -------------------------------------RISKS--------------------------------------------------- */
 .ip-risks {
   display: flex;
   flex-direction: column;
@@ -391,7 +388,7 @@ a:hover {
   color: var(--sage);
 }
 
-/* ── TEAM ─────────────────────────────────────────────────────── */
+/* ------------------------------------TEAM--------------------------------------------------- */
 .ip-team {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -452,7 +449,7 @@ a:hover {
   opacity: 1;
 }
 
-/* ── BIO PANEL ────────────────────────────────────────────────── */
+/* -------------------------------------BIO PANEL--------------------------------------------------- */
 .ip-bio {
   display: none;
   background: var(--mint);
@@ -499,7 +496,7 @@ a:hover {
   line-height: 1.6;
 }
 
-/* ── FOOTER ───────────────────────────────────────────────────── */
+/* -------------------------------------FOOTER--------------------------------------------------- */
 .ip-footer {
   padding: 40px 60px;
   background: var(--navy);
@@ -507,7 +504,7 @@ a:hover {
   font-size: 0.85rem;
 }
 
-/* ── SCROLL ANIMATIONS ───────────────────────────────────────── */
+/* -------------------------------------SCROLL ANIMATIONS--------------------------------------------------- */
 .fade-up {
   opacity: 0;
   transform: translateY(40px);
@@ -519,7 +516,7 @@ a:hover {
   transform: translateY(0);
 }
 
-/* ── SLIDESHOW ───────────────────────────────── */
+/* ------------------------------------SLIDESHOW ANIMATIONS--------------------------------------------------- */
 .ip-slideshow {
   position: relative;
   width: 100%;
@@ -564,7 +561,7 @@ a:hover {
 }
 
 
-/* ------------------------------------------------------ */
+/* -------------------------------------------------------------------------------------- */
 
 
 .an-block {
