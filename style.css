@@ -863,69 +863,29 @@ a:hover {
 .ip-hero-title { font-size: 3rem; }
   .ip-impact-title { font-size: 2.5rem; }
 
-  .ip-impact-full {
+.ip-impact-full {
     flex-direction: column;
-    align-items: stretch;
-    gap: 40px;
+    align-items: flex-start;
+    gap: 24px;
     padding: 40px 24px;
   }
 
   .ip-impact-text,
   .ip-impact-image {
-    flex: none;
     width: 100%;
-  }
-
-  .ip-impact-image {
-    display: block !important;
-    width: 100%;
-    min-height: 280px;
-  }
-
-  .ip-impact-image img,
-  .ip-photo-stack-top,
-  .ip-photo-stack-bottom {
-    display: block !important;
-    width: 100% !important;
-    height: 250px !important;
-    object-fit: cover;
+    flex: unset;
   }
 
   .ip-slideshow {
-    display: block !important;
-    width: 100%;
     height: 280px;
   }
 
   .ip-slide {
-    width: 100%;
-    height: 280px;
-    display: none;
-  }
-
-  .ip-slide.active {
-    display: block !important;
-    width: 100%;
     height: 280px;
   }
 
-  .ip-photo-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .ip-photo-stack {
-    display: flex !important;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .ip-impact-full.fade-up {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
-  .ip-impact-full.visible {
-    opacity: 1 !important;
-    transform: none !important;
+  .ip-photo-stack-top,
+  .ip-photo-stack-bottom {
+    height: 200px;
   }
 }
