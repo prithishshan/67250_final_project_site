@@ -562,3 +562,220 @@ a:hover {
   width: 20px;
   border-radius: 999px;
 }
+
+
+/* ------------------------------------------------------ */
+
+
+.an-block {
+  padding: 60px 50px;
+  border-top: 1px solid var(--sage);
+}
+.an-block-alt {
+  background: #f6f9f8;
+}
+.an-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 12px;
+}
+.an-block h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  max-width: 800px;
+}
+.an-lead {
+  font-size: 1.15rem;
+  color: #444;
+  line-height: 1.8;
+  max-width: 780px;
+  margin-bottom: 0;
+}
+
+
+.an-stats {
+  display: flex;
+  margin: 48px 0;
+  border: 1px solid var(--sage);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.an-stat {
+  flex: 1;
+  padding: 36px 32px;
+  border-right: 1px solid var(--sage);
+  background: #fff;
+}
+.an-stat:last-child { border-right: none; }
+
+.an-stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--teal);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.an-stat-label {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+.an-chain {
+  display: flex;
+  margin: 48px 0 0 0;
+  border: 1px solid var(--sage);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.an-chain-step {
+  flex: 1;
+  padding: 32px 28px;
+  background: #fff;
+  border-right: 1px solid var(--sage);
+}
+.an-chain-step:last-child { border-right: none; }
+
+.an-chain-step.an-highlight { background: var(--mint); }
+
+.an-chain-num {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 8px;
+}
+.an-chain-step h4 { font-size: 0.95rem; color: var(--navy); margin-bottom: 8px; }
+
+.an-chain-step p { font-size: 0.85rem; color: #666; line-height: 1.6; margin: 0; }
+
+.an-chain-badge {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
+  border: 1px solid var(--teal);
+  padding: 2px 10px;
+  border-radius: 999px;
+}
+
+
+.an-pillars { display: flex; gap: 24px; margin-top: 48px; }
+
+.an-pillar {
+  flex: 1;
+  border: 1px solid var(--sage);
+  border-radius: 20px;
+  padding: 36px 28px;
+  background: #fff;
+}
+.an-pillar-icon { font-size: 1.8rem; margin-bottom: 14px; }
+
+.an-pillar h4 { font-size: 1rem; color: var(--navy); margin-bottom: 8px; }
+
+.an-pillar p { font-size: 0.9rem; color: #555; line-height: 1.7; margin: 0; }
+
+
+.an-theories { display: flex; flex-direction: column; gap: 32px; margin-top: 48px; }
+
+.an-theory {
+  display: flex;
+  gap: 48px;
+  padding: 40px;
+  border: 1px solid var(--sage);
+  border-radius: 20px;
+  background: #fff;
+  align-items: flex-start;
+}
+.an-theory-meta { min-width: 200px; }
+.an-theory-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--teal);
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+.an-theory h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: var(--navy);
+  line-height: 1.25;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+.an-theory-cite { font-size: 0.8rem; color: #999; font-style: italic; }
+
+.an-theory-body { flex: 1; font-size: 0.98rem; color: #444; line-height: 1.8; }
+
+.an-theory-body p { margin-bottom: 0.9rem; }
+
+.an-theory-body p:last-child { margin-bottom: 0; }
+
+.an-callout {
+  background: var(--mint);
+  border-left: 3px solid var(--teal);
+  border-radius: 0 10px 10px 0;
+  padding: 14px 18px;
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: var(--navy);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.an-refs { display: flex; flex-direction: column; gap: 16px; margin-top: 40px; }
+
+.an-ref {
+  display: flex;
+  gap: 20px;
+  padding: 24px 28px;
+  border: 1px solid var(--sage);
+  border-radius: 14px;
+  background: #fff;
+  align-items: flex-start;
+}
+.an-ref-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--teal);
+  min-width: 28px;
+  margin-top: 2px;
+}
+
+.an-ref-body { font-size: 0.9rem; color: #444; line-height: 1.7; margin: 0; }
+
+.an-ref-body strong { color: var(--navy); }
+
+.an-ref-body a { color: var(--teal); word-break: break-all; }
+
+.an-body-text {
+  max-width: 780px;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.8;
+  margin: 40px 0;
+}
+
+.an-body-text p {
+  margin-bottom: 1rem;
+}
+
+.an-body-text p:last-child {
+  margin-bottom: 0;
+}
