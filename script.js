@@ -95,8 +95,7 @@ var observer = new IntersectionObserver(function(entries) {
       entry.target.classList.add('visible');
     }
   });
-}, { threshold: 0.15 });
-
+}, { threshold: 0.05 });
 fadeEls.forEach(function(el) {
   observer.observe(el);
 });
