@@ -848,28 +848,8 @@ a:hover {
     min-width: unset;
   }
 
-  .ip-team {
-    grid-template-columns: 1fr;
-  }
-
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.5rem; }
-  .ip-hero-title { font-size: 3rem; }
-  .ip-impact-title { font-size: 2.5rem; }
-
-  .ip-impact-full,
-  .ip-impact-full:nth-child(even),
-  .ip-impact-full:nth-child(odd) {
-    flex-direction: column;
-  }
-  .ip-impact-image {
-    width: 100%;
-  }
-  .ip-impact-image img {
-    height: 250px;
-  }
-  .ip-photo-grid,
-  .ip-photo-stack {
-    width: 100%;
+.ip-impact-full {
+    flex-direction: column !important;
+    gap: 40px;
   }
 }
