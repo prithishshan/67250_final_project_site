@@ -857,3 +857,19 @@ a:hover {
   .ip-hero-title { font-size: 3rem; }
   .ip-impact-title { font-size: 2.5rem; }
 }
+
+  .ip-impact-full,
+  .ip-impact-full:nth-child(even),
+  .ip-impact-full:nth-child(odd) {
+    flex-direction: column;
+  }
+  .ip-impact-image {
+    width: 100%;
+  }
+  .ip-impact-image img {
+    height: 250px;
+  }
+  .ip-photo-grid,
+  .ip-photo-stack {
+    width: 100%;
+  }
