@@ -1,4 +1,4 @@
-// ── IMPACT CARDS — click to expand ───────────────────────────
+/* ------------------------------------IMPACT CARDS-------------------------------------------------- */
 function expandCard(card) {
   var full = card.querySelector(".ip-card-full");
   var hint = card.querySelector(".ip-card-hint");
@@ -15,7 +15,7 @@ function expandCard(card) {
   }
 }
 
-// ── RISK ACCORDION ────────────────────────────────────────────
+/* -------------------------------------RISK PART--------------------------------------------------- */
 function toggleRisk(btn) {
   var content = btn.nextElementSibling;
   var arrow = btn.querySelector(".ip-arrow");
@@ -33,7 +33,7 @@ function toggleRisk(btn) {
   }
 }
 
-// ── TEAM BIO PANEL ────────────────────────────────────────────
+/* -------------------------------------TEAM BIO-------------------------------------------------- */
 var bios = {
   pritish: {
     name: "Pritish Shan",
@@ -87,7 +87,7 @@ function closeBio() {
   document.getElementById("ip-bio").style.display = "none";
 }
 
-// ── SCROLL FADE IN ────────────────────────────────────────────
+/* ------------------------------------SCROLL FADE-------------------------------------------------- */
 var fadeEls = document.querySelectorAll('.fade-up');
 var observer = new IntersectionObserver(function(entries) {
   entries.forEach(function(entry) {
@@ -100,8 +100,7 @@ var observer = new IntersectionObserver(function(entries) {
 fadeEls.forEach(function(el) {
   observer.observe(el);
 });
-
-// ── IMPACT SLIDESHOW ──────────────────────────────────────────
+/* ------------------------------------SLIDESHOW------------------------------------------------- */
 var ipSlides = document.querySelectorAll('.ip-slide');
 var ipDots = document.querySelectorAll('.ip-dot');
 var ipSlideIndex = 0;
