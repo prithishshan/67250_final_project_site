@@ -860,7 +860,7 @@ a:hover {
   h1 { font-size: 2rem; }
   h2 { font-size: 1.5rem; }
   
-  .ip-hero-title { font-size: 3rem; }
+.ip-hero-title { font-size: 3rem; }
   .ip-impact-title { font-size: 2.5rem; }
 
   .ip-impact-full {
@@ -877,21 +877,22 @@ a:hover {
   }
 
   .ip-impact-image {
-    display: block;
+    display: block !important;
     width: 100%;
+    min-height: 280px;
   }
 
   .ip-impact-image img,
   .ip-photo-stack-top,
   .ip-photo-stack-bottom {
-    display: block;
-    width: 100%;
-    height: 250px;
+    display: block !important;
+    width: 100% !important;
+    height: 250px !important;
     object-fit: cover;
   }
 
   .ip-slideshow {
-    display: block;
+    display: block !important;
     width: 100%;
     height: 280px;
   }
@@ -903,7 +904,7 @@ a:hover {
   }
 
   .ip-slide.active {
-    display: block;
+    display: block !important;
     width: 100%;
     height: 280px;
   }
@@ -913,7 +914,7 @@ a:hover {
   }
 
   .ip-photo-stack {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     width: 100%;
   }
