@@ -886,4 +886,14 @@ a:hover {
   .ip-photo-stack {
     width: 100%;
   }
+
+  .ip-slideshow,
+  .ip-slide {
+    height: 280px;
+  }
+
+  .ip-slide.active {
+    display: block;
+    width: 100%;
+  }
 }
