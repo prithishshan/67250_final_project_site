@@ -875,8 +875,28 @@ a:hover {
     width: 100%;
   }
 
+  .ip-impact-image {
+    display: block;
+    min-height: 280px;
+  }
+
   .ip-impact-image img {
     height: 250px;
+  }
+
+  .ip-slideshow {
+    height: 280px;
+    display: block;
+  }
+
+  .ip-slide {
+    height: 280px;
+  }
+
+  .ip-slide.active {
+    display: block;
+    width: 100%;
+    height: 280px;
   }
 
   .ip-photo-grid {
@@ -884,16 +904,6 @@ a:hover {
   }
 
   .ip-photo-stack {
-    width: 100%;
-  }
-
-  .ip-slideshow,
-  .ip-slide {
-    height: 280px;
-  }
-
-  .ip-slide.active {
-    display: block;
     width: 100%;
   }
 }
