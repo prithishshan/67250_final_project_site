@@ -888,4 +888,14 @@ a:hover {
   .ip-photo-stack-bottom {
     height: 200px;
   }
+   .ip-impact-image,
+  .ip-impact-image *,
+  .ip-slideshow,
+  .ip-slide.active,
+  .ip-photo-stack,
+  .ip-photo-stack * {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
 }
