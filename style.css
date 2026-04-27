@@ -819,7 +819,6 @@ a:hover {
   .ip-hero-title { font-size: 3rem; }
   .ip-impact-title { font-size: 2.5rem; }
 
-  /* IMPACT PAGE - stack vertically */
   .ip-impact-full {
     display: block;
     padding: 40px 24px;
@@ -843,13 +842,15 @@ a:hover {
   }
 
   .ip-slide {
+    display: none;
     height: 260px;
   }
 
-  .ip-slide.active {
-    display: block;
+  .ip-slide:first-child {
+    display: block !important;
     width: 100%;
     height: 260px;
+    object-fit: cover;
   }
 
   .ip-photo-stack {
