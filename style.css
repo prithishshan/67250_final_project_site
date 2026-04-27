@@ -918,4 +918,14 @@ a:hover {
     flex-direction: column;
     width: 100%;
   }
+
+  .ip-impact-full.fade-up {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .ip-impact-full.visible {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
