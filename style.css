@@ -778,10 +778,19 @@ a:hover {
 }
 
 
+/* -------------------------------------DESKTOP ONLY------------------------------------------------- */
+@media (min-width: 769px) {
+  .ip-impact-full:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .ip-impact-full:nth-child(odd) {
+    flex-direction: row;
+  }
+}
+
 /* -------------------------------------MOBILE------------------------------------------------- */
 @media (max-width: 768px) {
 
-  /* Nav */
   .ip-nav {
     padding: 16px 24px;
   }
@@ -789,7 +798,6 @@ a:hover {
     gap: 16px;
   }
 
-  /* Hero */
   .ip-hero-text {
     font-size: 1.8rem;
   }
@@ -810,7 +818,6 @@ a:hover {
     padding: 2rem;
   }
 
-  /* Wireframe rows */
   .wireframe-row,
   .wireframe-row.reverse {
     flex-direction: column;
@@ -820,12 +827,10 @@ a:hover {
     width: 100%;
   }
 
-  /* General padding */
   .wireframes {
     padding: 24px;
   }
   .ip-section,
-  .ip-impact-full,
   .an-block {
     padding: 40px 24px;
   }
@@ -848,17 +853,37 @@ a:hover {
     min-width: unset;
   }
 
-.ip-impact-full {
-    flex-direction: column !important;
-    align-items: stretch !important;
+  .ip-team {
+    grid-template-columns: 1fr;
+  }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  .ip-hero-title { font-size: 3rem; }
+  .ip-impact-title { font-size: 2.5rem; }
+
+  .ip-impact-full {
+    flex-direction: column;
+    align-items: stretch;
     gap: 40px;
     padding: 40px 24px;
   }
 
   .ip-impact-text,
   .ip-impact-image {
-    flex: none !important;
-    width: 100% !important;
+    flex: none;
+    width: 100%;
   }
 
+  .ip-impact-image img {
+    height: 250px;
+  }
+
+  .ip-photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ip-photo-stack {
+    width: 100%;
+  }
 }
