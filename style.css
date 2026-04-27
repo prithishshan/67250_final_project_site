@@ -53,25 +53,35 @@ a:hover {
 }
 
 .wireframes {
+  /* font-family: 'DM Sans', sans-serif; */
   display: flex;
   flex-direction: column;
+  gap: 40px; /* Adds vertical space between your two rows */
   width: 100%;
+  padding: 50px;
 }
 
-.wireframes img {
-  width: 50vw;
-  height: 70vh;
-  object-fit: contain;
+/* This creates the side-by-side layout */
+.wireframe-row {
+  display: flex;
+  align-items: center; /* Centers the text vertically with the image */
+  gap: 60px; /* Space between the image and the text */
 }
 
-.wireframes .left {
-  align-self: flex-start;
-  border-radius: 25px;
+/* This flips the layout for the second row so the image goes to the right */
+.wireframe-row.reverse {
+  flex-direction: row-reverse;
 }
 
-.wireframes .right {
-  align-self: flex-end;
-  border-radius: 25px;
+.wireframe-row img {
+  width: 50%; /* Image takes up half the row */
+  height: auto; 
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.text-content {
+  width: 50%; /* Text takes up the other half */
 }
 
 /* ── NAV ─────────────────────────────────────────────────────── */
